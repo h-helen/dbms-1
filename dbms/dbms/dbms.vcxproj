@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{F3DB1CBD-52D2-475B-9B03-6D27D3A1F1ED}</ProjectGuid>
+    <ProjectGuid>{07E8579A-50B7-442F-BA82-00F8ED56FD89}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
     <RootNamespace>dbms</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
