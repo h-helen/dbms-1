@@ -26,9 +26,7 @@ BEGIN_MESSAGE_MAP(CdbmsView, CView)
 	// 标准打印命令
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CdbmsView::OnFilePrintPreview)
-	ON_WM_CONTEXTMENU()
-	ON_WM_RBUTTONUP()
+	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
 END_MESSAGE_MAP()
 
 // CdbmsView 构造/析构
@@ -66,14 +64,6 @@ void CdbmsView::OnDraw(CDC* /*pDC*/)
 
 // CdbmsView 打印
 
-
-void CdbmsView::OnFilePrintPreview()
-{
-#ifndef SHARED_HANDLERS
-	AFXPrintPreview(this);
-#endif
-}
-
 BOOL CdbmsView::OnPreparePrinting(CPrintInfo* pInfo)
 {
 	// 默认准备
@@ -88,19 +78,6 @@ void CdbmsView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 void CdbmsView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
 	// TODO: 添加打印后进行的清理过程
-}
-
-void CdbmsView::OnRButtonUp(UINT /* nFlags */, CPoint point)
-{
-	ClientToScreen(&point);
-	OnContextMenu(this, point);
-}
-
-void CdbmsView::OnContextMenu(CWnd* /* pWnd */, CPoint point)
-{
-#ifndef SHARED_HANDLERS
-	theApp.GetContextMenuManager()->ShowPopupMenu(IDR_POPUP_EDIT, point.x, point.y, this, TRUE);
-#endif
 }
 
 
