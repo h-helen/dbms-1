@@ -27,6 +27,7 @@ static UINT indicators[] =
 	ID_INDICATOR_CAPS,
 	ID_INDICATOR_NUM,
 	ID_INDICATOR_SCRL,
+	ID_INDICATOR_TIME
 };
 
 // CMainFrame 构造/析构
@@ -96,3 +97,20 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 
 // CMainFrame 消息处理程序
+
+
+
+void CMainFrame::OnTimer(UINT_PTR nIDEvent)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	CString strTime;
+	// 获取系统当前时间，并保存到curTime   
+	CTime curTime = CTime::GetCurrentTime();
+
+	// 格式化curTime，将字符串保存到strTime   
+	strTime = curTime.Format(_T("%H:%M:%S"));
+	// 在状态栏的时间窗格中显示系统时间字符串   
+	m_wndStatusBar.SetPaneText(4, strTime);
+
+	CFrameWnd::OnTimer(nIDEvent);
+}
