@@ -136,9 +136,3 @@ void CdbmsDoc::Dump(CDumpContext& dc) const
 
 
 // CdbmsDoc 命令
-
-//重写标题
-void CdbmsDoc::SetTitle(LPCTSTR lpszTitle)
-{
-	CDocument::SetTitle(L"BDMS");
-}
