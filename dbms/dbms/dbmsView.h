@@ -1,7 +1,19 @@
 ﻿
 // dbmsView.h: CdbmsView 类的接口
 //
+#include "pch.h"
+#include "framework.h"
+#include "afxwinappex.h"
+#include "afxdialogex.h"
+#include "dbms.h"
+#include "MainFrm.h"
 
+#include "dbmsDoc.h"
+ 
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
 #pragma once
 
 

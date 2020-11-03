@@ -5,7 +5,8 @@
 #include "pch.h"
 #include "framework.h"
 #include "dbms.h"
-
+#include "CTreeview.h"
+#include "dbmsView.h"
 #include "MainFrm.h"
 
 #ifdef _DEBUG
@@ -113,4 +114,15 @@ void CMainFrame::OnTimer(UINT_PTR nIDEvent)
 	m_wndStatusBar.SetPaneText(4, strTime);
 
 	CFrameWnd::OnTimer(nIDEvent);
+}
+
+
+BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
+{
+	// TODO: 在此添加专用代码和/或调用基类
+	m_wndSplitter.CreateStatic(this, 1, 2);
+	m_wndSplitter.CreateView(0, 0, RUNTIME_CLASS(CTreeview), CSize(200, 0), pContext);
+	m_wndSplitter.CreateView(0, 1, RUNTIME_CLASS(CdbmsView), CSize(0, 0), pContext);
+
+	return TRUE;
 }

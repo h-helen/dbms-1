@@ -16,7 +16,7 @@ public:
 
 // 操作
 public:
-
+	CSplitterWnd  m_wndSplitter;
 // 重写
 public:
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -40,6 +40,7 @@ protected:
 
 public:
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	virtual BOOL OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext);
 };
 
 

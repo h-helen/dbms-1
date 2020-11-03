@@ -136,3 +136,8 @@ void CdbmsDoc::Dump(CDumpContext& dc) const
 
 
 // CdbmsDoc 命令
+
+
+void CdbmsDoc::SetTitle(LPCTSTR lpszTitle) {
+	CDocument::SetTitle(L"DBMS");
+}

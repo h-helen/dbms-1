@@ -5,6 +5,7 @@
 #define ID_INDICATOR_TIME               1
 #define IDD_ABOUTBOX                    100
 #define IDP_OLE_INIT_FAILED             100
+#define IDS_STRING101                   101
 #define IDR_MAINFRAME                   128
 #define IDR_dbmsTYPE                    130
 #define IDD_DIALOG1                     310

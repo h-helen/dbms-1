@@ -183,6 +183,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CTreeview.h" />
     <ClInclude Include="dbms.h" />
     <ClInclude Include="dbmsDoc.h" />
     <ClInclude Include="dbmsView.h" />
@@ -193,6 +194,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CTreeview.cpp" />
     <ClCompile Include="dbms.cpp" />
     <ClCompile Include="dbmsDoc.cpp" />
     <ClCompile Include="dbmsView.cpp" />
